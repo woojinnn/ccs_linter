@@ -1,0 +1,43 @@
+{
+    "scopeName": "source.ccs",
+    "fileTypes": [
+        "ccs"
+    ],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#events"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.custom-language",
+                    "match": "\\*(.*?)\\n"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.other.custom-language",
+                    "match": "\\b(proc|set)\\b"
+                }
+            ]
+        },
+        "events": {
+            "patterns": [
+                {
+                    "name": "entity.name.event.custom-language",
+                    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+                }
+            ]
+        }
+    }
+}
